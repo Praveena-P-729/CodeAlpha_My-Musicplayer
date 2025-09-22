@@ -1,0 +1,68 @@
+/* style.css */
+
+/* Apply a moving gradient background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 800% 800%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Player box styling */
+.player {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 350px;
+}
+
+/* Title & artist */
+#title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+#artist {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Buttons */
+button {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  padding: 12px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  background: #ff9a9e;
+  color: #fff;
+}
+
+/* Sliders */
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+  accent-color: #ff9a9e;
+}
